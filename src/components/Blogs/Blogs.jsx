@@ -9,10 +9,10 @@ const Blogs = () => {
         .then(res => res.json())
         .then(data => setBlogs(data))
     }, [])
-    
+
     return (
-        <div>
-            
+        <div className="col-span-2">
+            <h2 className="text-3xl">Blogs: {blogs.length}</h2>
         </div>
     );
 };
