@@ -8,7 +8,7 @@ function App() {
   return (
     <>
         <Header></Header>
-        <div className='md:grid md:grid-cols-3'>
+        <div className='md:grid md:grid-cols-3 md:gap-4 py-4 mx-4'>
           <Blogs></Blogs>
           <Bookmarks></Bookmarks>
         </div>
