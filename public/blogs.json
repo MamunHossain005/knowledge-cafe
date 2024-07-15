@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "cover": "https://i.ibb.co/807frHq/ocean.jpg",
+      "title": "Exploring the Depths of the Ocean",
+      "author": "Jane Smith",
+      "author_img": "https://i.ibb.co/qD81Wnc/author-1.jpg",
+      "posted_date": "May 21 (55 days ago)",
+      "reading_time": 8,
+      "hashtags": ["#ocean", "#exploration", "#marineBiology"]
+    },
+    {
+      "id": 2,
+      "cover": "https://i.ibb.co/28xdprB/healthcare.jpg",
+      "title": "The Future of AI in Healthcare",
+      "author": "John Doe",
+      "author_img": "https://i.ibb.co/L5wbv83/author-2.jpg",
+      "posted_date": "Jun 15 (30 days ago)",
+      "reading_time": 10,
+      "hashtags": ["#AI", "#healthcare", "#innovation"]
+    },
+    {
+      "id": 3,
+      "cover": "https://i.ibb.co/54zv23d/frenc-coocking.jpg",
+      "title": "Mastering the Art of French Cooking",
+      "author": "Emily Johnson",
+      "author_img": "https://i.ibb.co/HVfBrRM/author-3.jpg",
+      "posted_date": "Jul 01 (14 days ago)",
+      "reading_time": 15,
+      "hashtags": ["#cooking", "#frenchCuisine", "#recipes"]
+    },
+    {
+      "id": 4,
+      "cover": "https://i.ibb.co/0tJFP8z/classical-music.jpg",
+      "title": "A Journey Through the World of Classical Music",
+      "author": "Michael Brown",
+      "author_img": "https://i.ibb.co/nzt64FM/author-4.jpg",
+      "posted_date": "Jul 10 (5 days ago)",
+      "reading_time": 12,
+      "hashtags": ["#classicalMusic", "#history", "#composers"]
+    },
+    {
+      "id": 5,
+      "cover": "https://i.ibb.co/pnkhpXQ/urban-farming.jpg",
+      "title": "Innovative Approaches to Urban Farming",
+      "author": "Sarah Lee",
+      "author_img": "https://i.ibb.co/zNbfzyw/author-5.jpg",
+      "posted_date": "Jul 14 (1 day ago)",
+      "reading_time": 7,
+      "hashtags": ["#urbanFarming", "#sustainability", "#innovation"]
+    }
+  ]
+  
