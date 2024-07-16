@@ -7,6 +7,7 @@ import { getBlogsFromLocalStorage, setBlogsInLocalStorage } from './utilities/bo
 
 function App() {
   const[bookmarkedBlogs, setBookmarkedBlogs] = useState([]);
+  const[spentTime, setSpentTime] = useState(0);
 
   useEffect(()=>{
     const bookmarked = getBlogsFromLocalStorage();
@@ -23,14 +24,22 @@ function App() {
     setBlogsInLocalStorage(title); 
   }
 
-  console.log(bookmarkedBlogs);
+  const handleSpentTime = readTime => {
+    setSpentTime(spentTime + readTime);
+  }
+
+  const handleRead = title => {
+    const remaining = bookmarkedBlogs.filter(blogTitle => blogTitle !== title);
+    setBookmarkedBlogs(remaining);
+    localStorage.setItem('bookmarkedBlogs', JSON.stringify(remaining));
+  }
 
   return (
     <>
         <Header></Header>
         <div className='md:grid md:grid-cols-3 md:gap-4 py-4 mx-4'>
-          <Blogs handleBookmark={handleBookmark}></Blogs>
-          <Bookmarks bookmarkedBlogs={bookmarkedBlogs}></Bookmarks>
+          <Blogs handleBookmark={handleBookmark} handleSpentTime={handleSpentTime}  handleRead={handleRead}></Blogs>
+          <Bookmarks bookmarkedBlogs={bookmarkedBlogs} spentTime={spentTime}></Bookmarks>
         </div>
     </>
   )
