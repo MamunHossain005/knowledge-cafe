@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { IoBookmarksOutline } from "react-icons/io5";
 
-const Blog = ({blog, handleBookmark, handleSpentTime, handleRead}) => {
+const Blog = ({blog, handleBookmark, handleMarkAsRead}) => {
     const{title, cover, author, author_img, posted_date, reading_time, hashtags} = blog;
     return (
         <div className='border-b-2 mb-10'>
@@ -24,7 +24,7 @@ const Blog = ({blog, handleBookmark, handleSpentTime, handleRead}) => {
                 {hashtags.map((hashtag, idx) => <span key={idx} className='ml-2'>{hashtag}</span>)}
             </div>
             <button className='underline mb-4 text-blue-700 font-medium' 
-            onClick={()=>{handleSpentTime(reading_time); handleRead(title)}}>Mark as read</button>
+            onClick={()=>{handleMarkAsRead(reading_time, title)}}>Mark as read</button>
         </div>
     );
 };
@@ -32,8 +32,7 @@ const Blog = ({blog, handleBookmark, handleSpentTime, handleRead}) => {
 Blog.propTypes = {
     blog: PropTypes.object.isRequired,
     handleBookmark: PropTypes.func.isRequired,
-    handleSpentTime: PropTypes.func.isRequired,
-    handleRead: PropTypes.func.isRequired,
+    handleMarkAsRead: PropTypes.func.isRequired,
 }
 
 export default Blog;

@@ -24,21 +24,21 @@ function App() {
     setBlogsInLocalStorage(title); 
   }
 
-  const handleSpentTime = readTime => {
+  const handleMarkAsRead = (readTime, title) => {
+    //set spent time
     setSpentTime(spentTime + readTime);
-  }
-
-  const handleRead = title => {
+    //remove from bookmarks
     const remaining = bookmarkedBlogs.filter(blogTitle => blogTitle !== title);
     setBookmarkedBlogs(remaining);
     localStorage.setItem('bookmarkedBlogs', JSON.stringify(remaining));
   }
 
+
   return (
     <>
         <Header></Header>
         <div className='md:grid md:grid-cols-3 md:gap-4 py-4 mx-4'>
-          <Blogs handleBookmark={handleBookmark} handleSpentTime={handleSpentTime}  handleRead={handleRead}></Blogs>
+          <Blogs handleBookmark={handleBookmark} handleMarkAsRead={handleMarkAsRead}></Blogs>
           <Bookmarks bookmarkedBlogs={bookmarkedBlogs} spentTime={spentTime}></Bookmarks>
         </div>
     </>
